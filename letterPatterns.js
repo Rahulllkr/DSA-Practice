@@ -154,6 +154,63 @@
 
 
 
+// function inccreamentAlpha(num){
+
+//     for(let i = 0 ; i < num ; i++){
+//         let row = "";
+//         for(let j = 0 ; j < num ; j++){
+//             row = row + String.fromCharCode(65 + j) + " ";
+//         }
+//         console.log(row)
+//     }
+
+// }
+
+// inccreamentAlpha(5)
+
+
+// right angle increment
+
+// function rightAngle(num){
+
+//     for(let i = 0 ; i < num ; i++){
+//         let row = "";
+//         for(let j = 0 ; j <= i ; j++){
+//             row = row + String.fromCharCode(65 + j) + " ";
+//         }
+//         console.log(row);
+//     }
+
+// }
+
+// rightAngle(5)
 
 
 
+// function continouoschar(num){
+
+//     let ch = 65;
+
+//     for(let i = 0 ; i <  num ; i++){
+//         let row = "";
+//         for(let j = 0 ; j <= i ; j++){
+//             row = row + String.fromCharCode( ch + j) + " ";
+//             ch++;
+//         }
+//         console.log(row);
+//     }
+
+// }
+// continouoschar(5);
+
+
+
+
+const a = {
+    age : 23,
+}
+
+const b = a
+
+b.age = 100;
+console.log(b);
