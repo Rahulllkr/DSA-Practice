@@ -178,12 +178,10 @@
 // }
 // continouoschar(5);
 
-
-
 //inverted triangle in decreasing order
 
 // const invertedTriangle = (num) => {
-    
+
 //     for(let i = 0 ; i < num ; i++){
 //         let row = "";
 //         for(let j = 0 ; j < num - i ; j++){
@@ -195,22 +193,52 @@
 
 // invertedTriangle(5);
 
-
-
 //reverse start with alphabet
 
+// const reverseAlphabet = (num) => {
 
-const reverseAlphabet = (num) => {
+//     for(let i = 0 ; i < num ; i++){
+//         let row = "";
+//         for(let j = 0 ; j <= i ; j++){
+//             row = row + String.fromCharCode(65 -1 + num - i + j) + " ";
+//         }
+//         console.log(row);
+//     }
 
-    for(let i = 0 ; i < num ; i++){
-        let row = "";
-        for(let j = 0 ; j <= i ; j++){
-            row = row + String.fromCharCode(65 + num - j) + " ";
-        }
-        console.log(row);
+// }
+
+// reverseAlphabet(4)
+
+//reverse letter in row
+
+// const reverseLetter = (num) => {
+
+//     for(let i = 0 ; i < num ; i++){
+//         let row = "";
+//         for(let j = 0 ; j <= i ; j++){
+//             row = row + String.fromCharCode( 65 - j + i) + " ";
+//         }
+//         console.log(row);
+//     }
+
+// }
+
+// reverseLetter(4)
+
+//pyramid style
+
+const pyramid = (num) => {
+  for (let i = 0; i < num; i++) {
+    let row = "";
+    for (let space = 0; space < num - i - 1; space++) {
+      row = row + " ";
+    }
+    for (let star = 0; star < 2 * i + 1; star++) {
+      row += "*";
     }
 
+    console.log(row);
+  }
+};
 
-}
-
-reverseAlphabet(4)
+pyramid(5);
