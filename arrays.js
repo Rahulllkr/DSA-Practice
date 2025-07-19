@@ -32,23 +32,64 @@
 
 //reverse an array
 
-let arr = [1,2,3,4]
+// let arr = [1,2,3,4,5]
 
-function reverse(arr){
+// function reverse(arr){
 
-    let last =arr.length-1;
-    let first = 0;
+//     let last =arr.length-1;
+//     let first = 0;
 
-    while ( first < last){
-        [arr[first],arr[last]] = [
-            arr[last],arr[first]
-        ]
-          first++
-          last--
+//     while ( first < last){
+//         [arr[first],arr[last]] = [
+//             arr[last],arr[first]
+//         ]
+//           first++
+//           last--
+//     }
+
+//     return arr;
+
+// }
+
+// console.log(reverse(arr));
+
+
+
+//Count Even or Odd Number
+
+// const arr = [1,4,3,6,8,9]
+// function count(arr){
+
+//     let evenCount = 0;
+//     let oddCount = 0;
+
+//     for(let i = 0 ; i < arr.length ; i++){
+//         if(arr[i] % 2 === 0){
+//             evenCount++;
+//         }else{
+//             oddCount++
+//         }
+//     }
+
+//     console.log(`Even Count ${evenCount} : Odd Count ${oddCount}`)
+
+// }
+// count(arr);
+
+
+
+//check if array is sorted
+
+
+const arr = [1,2,3,4,5]
+
+function checkSorted(arr){
+
+    for(let i = 0 ; i < arr.length ; i++){
+        if(arr[i] > arr[i+1]){
+            return false
+        }
     }
-
-    return arr;
-
+    return true
 }
-
-console.log(reverse(arr));
+console.log(checkSorted(arr));
