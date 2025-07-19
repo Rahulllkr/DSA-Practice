@@ -95,28 +95,20 @@
 // console.log(checkSorted(arr));
 
 
-const arr = [10,5,20,8]
 
-function secondLargest(arr){
-    let largest = -Infinity
-    let secondLargest = -Infinity
-    let thirdLargest = -Infinity
 
-    for(let i = 0 ; i < arr.length ; i++){
-      if(arr[i] > largest){
-        thirdLargest = secondLargest;
-        secondLargest = largest;
-        largest = arr[i]
-      }else if( arr[i] > secondLargest){
-        thirdLargest = secondLargest
-        secondLargest = arr[i];
-      }else if(arr[i] > thirdLargest){
-        thirdLargest = arr[i]
-      }
 
-    }
-    return thirdLargest;
+//rotate array by 1
+
+const arr = [1,2,3,4]
+
+function rotateArray(arr){
+
+    let last = arr[arr.length-1]
+    arr.pop(arr[last])
+    arr.unshift(last)
+    console.log(arr)
 
 }
 
-console.log(secondLargest(arr));
+rotateArray(arr);
