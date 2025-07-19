@@ -81,15 +81,42 @@
 //check if array is sorted
 
 
-const arr = [1,2,3,4,5]
+// const arr = [1,2,3,4,5]
 
-function checkSorted(arr){
+// function checkSorted(arr){
+
+//     for(let i = 0 ; i < arr.length ; i++){
+//         if(arr[i] > arr[i+1]){
+//             return false
+//         }
+//     }
+//     return true
+// }
+// console.log(checkSorted(arr));
+
+
+const arr = [10,5,20,8]
+
+function secondLargest(arr){
+    let largest = -Infinity
+    let secondLargest = -Infinity
+    let thirdLargest = -Infinity
 
     for(let i = 0 ; i < arr.length ; i++){
-        if(arr[i] > arr[i+1]){
-            return false
-        }
+      if(arr[i] > largest){
+        thirdLargest = secondLargest;
+        secondLargest = largest;
+        largest = arr[i]
+      }else if( arr[i] > secondLargest){
+        thirdLargest = secondLargest
+        secondLargest = arr[i];
+      }else if(arr[i] > thirdLargest){
+        thirdLargest = arr[i]
+      }
+
     }
-    return true
+    return thirdLargest;
+
 }
-console.log(checkSorted(arr));
+
+console.log(secondLargest(arr));
