@@ -105,9 +105,9 @@ const arr = [1,2,3,4]
 function rotateArray(arr){
 
     let last = arr[arr.length-1]
-    arr.pop(arr[last])
-    arr.unshift(last)
-    console.log(arr)
+   arr.pop()
+   arr.unshift(last)
+   console.log(arr);
 
 }
 
