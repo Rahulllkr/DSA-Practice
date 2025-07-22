@@ -100,15 +100,46 @@
 
 //rotate array by 1
 
-const arr = [1,2,3,4]
+// const arr = [1,2,3,4]
 
-function rotateArray(arr){
+// function rotateArray(arr){
 
-    let last = arr[arr.length-1]
-   arr.pop()
-   arr.unshift(last)
-   console.log(arr);
+//     let last = arr[arr.length-1]
+//    arr.pop()
+//    arr.unshift(last)
+//    console.log(arr);
+
+// }
+
+// rotateArray(arr);
+
+
+
+//Index of the target element after sorting
+
+let arr = [6,27,2,3,1,5]
+let target = 5;
+
+function indexOfEle(arr,target){
+
+    for(let i = 0 ; i < arr.length ; i++){
+        
+        for(let j = i ; j < arr.length ; j++){
+            if(arr[i] > arr[j]){
+                [arr[i],arr[j]] = [
+                    arr[j],arr[i]
+                ]
+            }
+        }
+    }
+
+    for(let i = 0 ; i < arr.length ; i++){
+        if(arr[i] === target){
+            return i;
+        }
+    }
+    
 
 }
 
-rotateArray(arr);
+console.log(indexOfEle(arr,target))
