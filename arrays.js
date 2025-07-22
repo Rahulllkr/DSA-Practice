@@ -118,12 +118,11 @@
 //Index of the target element after sorting
 
 let arr = [6,27,2,3,1,5]
-let target = 5;
+let target = 27;
 
 function indexOfEle(arr,target){
 
     for(let i = 0 ; i < arr.length ; i++){
-        
         for(let j = i ; j < arr.length ; j++){
             if(arr[i] > arr[j]){
                 [arr[i],arr[j]] = [
@@ -131,13 +130,16 @@ function indexOfEle(arr,target){
                 ]
             }
         }
-    }
-
-    for(let i = 0 ; i < arr.length ; i++){
         if(arr[i] === target){
             return i;
         }
     }
+
+    // for(let i = 0 ; i < arr.length ; i++){
+    //     if(arr[i] === target){
+    //         return i;
+    //     }
+    // }
     
 
 }
